@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Копчёные Козявки</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #0d0804;
+        }
+        svg {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" width="500" height="400">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#3a2a1a"/>
+      <stop offset="100%" stop-color="#1a1008"/>
+    </radialGradient>
+    <radialGradient id="booger1" cx="40%" cy="35%">
+      <stop offset="0%" stop-color="#a07040"/>
+      <stop offset="60%" stop-color="#6b4226"/>
+      <stop offset="100%" stop-color="#4a2a10"/>
+    </radialGradient>
+    <radialGradient id="booger2" cx="40%" cy="35%">
+      <stop offset="0%" stop-color="#8b6935"/>
+      <stop offset="60%" stop-color="#5c3d1e"/>
+      <stop offset="100%" stop-color="#3d2510"/>
+    </radialGradient>
+    <radialGradient id="booger3" cx="40%" cy="35%">
+      <stop offset="0%" stop-color="#b8864a"/>
+      <stop offset="60%" stop-color="#7a5030"/>
+      <stop offset="100%" stop-color="#4e3018"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="500" height="400" rx="30" fill="url(#bg)"/>
+
+  <!-- Smoke wisps -->
+  <g opacity="0.3" fill="none" stroke="#998877" stroke-width="2">
+    <path d="M100,200 Q110,170 100,140 Q90,110 105,80 Q115,55 100,30">
+      <animate attributeName="d" dur="4s" repeatCount="indefinite"
+        values="M100,200 Q110,170 100,140 Q90,110 105,80 Q115,55 100,30;
+                M100,200 Q90,170 105,140 Q115,110 95,80 Q85,55 100,30;
+                M100,200 Q110,170 100,140 Q90,110 105,80 Q115,55 100,30"/>
+    </path>
+    <path d="M250,180 Q260,150 250,120 Q240,90 255,60 Q265,35 250,10">
+      <animate attributeName="d" dur="5s" repeatCount="indefinite"
+        values="M250,180 Q260,150 250,120 Q240,90 255,60 Q265,35 250,10;
+                M250,180 Q240,150 255,120 Q265,90 245,60 Q235,35 250,10;
+                M250,180 Q260,150 250,120 Q240,90 255,60 Q265,35 250,10"/>
+    </path>
+    <path d="M400,195 Q410,165 400,135 Q390,105 405,75 Q415,50 400,25">
+      <animate attributeName="d" dur="4.5s" repeatCount="indefinite"
+        values="M400,195 Q410,165 400,135 Q390,105 405,75 Q415,50 400,25;
+                M400,195 Q390,165 405,135 Q415,105 395,75 Q385,50 400,25;
+                M400,195 Q410,165 400,135 Q390,105 405,75 Q415,50 400,25"/>
+    </path>
+  </g>
+
+  <!-- Booger 1 (left) - big papa booger -->
+  <g transform="translate(80, 200)">
+    <path d="M0,40 Q-15,20 -5,-5 Q10,-25 35,-20 Q60,-30 75,-10 Q90,5 80,30 Q75,55 55,60 Q30,65 15,55 Z"
+          fill="url(#booger1)" stroke="#3a1f0a" stroke-width="1.5"/>
+    <ellipse cx="25" cy="5" rx="15" ry="8" fill="#c09060" opacity="0.4"/>
+    <ellipse cx="20" cy="18" rx="9" ry="10" fill="white"/>
+    <ellipse cx="48" cy="15" rx="8" ry="9" fill="white"/>
+    <circle cx="22" cy="20" r="5" fill="#2a1a0a"/>
+    <circle cx="50" cy="17" r="4.5" fill="#2a1a0a"/>
+    <circle cx="24" cy="18" r="2" fill="white"/>
+    <circle cx="52" cy="15" r="1.8" fill="white"/>
+    <path d="M10,10 Q15,5 28,8" fill="none" stroke="#2a1a0a" stroke-width="3" stroke-linecap="round"/>
+    <path d="M40,7 Q52,3 60,8" fill="none" stroke="#2a1a0a" stroke-width="3" stroke-linecap="round"/>
+    <g fill="none" stroke="#b8b0a0" stroke-linecap="round">
+      <path d="M15,55 Q10,75 2,90" stroke-width="2.5"/>
+      <path d="M20,58 Q22,80 18,98" stroke-width="2"/>
+      <path d="M28,60 Q35,82 32,100" stroke-width="2.2"/>
+      <path d="M35,62 Q30,88 38,105" stroke-width="1.8"/>
+      <path d="M42,60 Q48,85 44,98" stroke-width="2.3"/>
+      <path d="M50,58 Q55,78 50,94" stroke-width="2"/>
+      <path d="M58,52 Q65,72 62,88" stroke-width="2.2"/>
+      <path d="M10,50 Q-8,58 -18,55" stroke-width="2.3"/>
+      <path d="M5,45 Q-12,55 -22,50" stroke-width="2"/>
+      <path d="M12,58 Q-2,68 -12,72" stroke-width="1.8"/>
+      <path d="M65,42 Q82,50 92,46" stroke-width="2.2"/>
+      <path d="M70,35 Q88,42 96,38" stroke-width="2"/>
+      <path d="M62,50 Q78,60 88,58" stroke-width="1.8"/>
+      <path d="M25,60 Q18,95 25,112" stroke-width="1.5"/>
+      <path d="M40,62 Q48,98 42,110" stroke-width="1.5"/>
+      <path d="M12,55 Q2,85 -5,95" stroke-width="1.5"/>
+      <path d="M55,54 Q65,82 72,90" stroke-width="1.5"/>
+      <path d="M2,90 Q-2,94 -5,92" stroke-width="1.5"/>
+      <path d="M18,98 Q14,102 16,104" stroke-width="1.5"/>
+      <path d="M32,100 Q28,103 30,106" stroke-width="1.5"/>
+      <path d="M-18,55 Q-22,52 -21,48" stroke-width="1.5"/>
+      <path d="M92,46 Q96,43 94,40" stroke-width="1.5"/>
+    </g>
+    <path d="M20,33 Q30,38 48,32" fill="none" stroke="#4a2a10" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <!-- Booger 2 (center) -->
+  <g transform="translate(200, 215)">
+    <path d="M0,30 Q-10,15 0,-5 Q15,-22 30,-18 Q50,-25 60,-8 Q70,8 62,28 Q55,42 40,45 Q20,48 8,40 Z"
+          fill="url(#booger2)" stroke="#2d1808" stroke-width="1.5"/>
+    <ellipse cx="18" cy="0" rx="12" ry="6" fill="#9a7845" opacity="0.4"/>
+    <ellipse cx="16" cy="12" rx="8" ry="9" fill="white"/>
+    <ellipse cx="40" cy="10" rx="7" ry="8" fill="white"/>
+    <circle cx="18" cy="13" r="4.5" fill="#2a1a0a"/>
+    <circle cx="42" cy="11" r="4" fill="#2a1a0a"/>
+    <circle cx="20" cy="11" r="1.8" fill="white"/>
+    <circle cx="44" cy="9" r="1.6" fill="white"/>
+    <g transform="translate(58, -15)" fill="#ddc090" opacity="0.7">
+      <circle cx="0" cy="10" r="3"/>
+      <rect x="2.5" y="-8" width="2" height="18"/>
+      <path d="M4.5,-8 Q12,-12 10,-3" fill="none" stroke="#ddc090" stroke-width="1.5"/>
+    </g>
+    <path d="M14,24 Q25,32 42,22" fill="none" stroke="#2a1a0a" stroke-width="1.8" stroke-linecap="round"/>
+  </g>
+
+  <!-- Booger 3 (right) -->
+  <g transform="translate(340, 225)">
+    <path d="M0,25 Q-8,12 2,-3 Q12,-18 25,-15 Q42,-20 50,-5 Q58,8 52,24 Q46,36 33,38 Q15,40 5,33 Z"
+          fill="url(#booger3)" stroke="#3a200c" stroke-width="1.5"/>
+    <ellipse cx="15" cy="0" rx="10" ry="5" fill="#d0a060" opacity="0.4"/>
+    <ellipse cx="14" cy="10" rx="8" ry="9" fill="white"/>
+    <ellipse cx="36" cy="8" rx="7" ry="8" fill="white"/>
+    <circle cx="15" cy="11" r="5" fill="#2a1a0a"/>
+    <circle cx="37" cy="9" r="4.5" fill="#2a1a0a"/>
+    <circle cx="17" cy="9" r="2" fill="white"/>
+    <circle cx="39" cy="7" r="1.8" fill="white"/>
+    <path d="M12,20 Q24,30 38,19" fill="none" stroke="#2a1a0a" stroke-width="1.8" stroke-linecap="round"/>
+    <g transform="translate(52, 18)" fill="#cc4444" opacity="0.6">
+      <rect x="0" y="0" width="14" height="10" rx="1.5"/>
+      <rect x="2" y="-3" width="4" height="3" rx="1" fill="#dd5555"/>
+      <rect x="8" y="-3" width="4" height="3" rx="1" fill="#dd5555"/>
+    </g>
+  </g>
+
+  <!-- Title text -->
+  <text x="250" y="330" text-anchor="middle" font-family="'Comic Sans MS', 'Segoe UI', sans-serif"
+        font-size="38" font-weight="bold" fill="#ddb870" filter="url(#glow)">
+    КОПЧЁНЫЕ
+  </text>
+  <text x="250" y="372" text-anchor="middle" font-family="'Comic Sans MS', 'Segoe UI', sans-serif"
+        font-size="38" font-weight="bold" fill="#c49550" filter="url(#glow)">
+    КОЗЯВКИ
+  </text>
+
+  <!-- Tiny smoke particles -->
+  <g fill="#aa9977" opacity="0.2">
+    <circle cx="120" cy="90" r="4">
+      <animate attributeName="cy" dur="3s" repeatCount="indefinite" values="90;50;20" />
+      <animate attributeName="opacity" dur="3s" repeatCount="indefinite" values="0.3;0.15;0" />
+    </circle>
+    <circle cx="270" cy="80" r="3">
+      <animate attributeName="cy" dur="3.5s" repeatCount="indefinite" values="80;40;10" />
+      <animate attributeName="opacity" dur="3.5s" repeatCount="indefinite" values="0.25;0.1;0" />
+    </circle>
+    <circle cx="410" cy="85" r="3.5">
+      <animate attributeName="cy" dur="3.2s" repeatCount="indefinite" values="85;45;15" />
+      <animate attributeName="opacity" dur="3.2s" repeatCount="indefinite" values="0.3;0.12;0" />
+    </circle>
+  </g>
+</svg>
+</body>
+</html>
